@@ -1,0 +1,6 @@
+TiendaMyM\App.class
+TiendaMyM\calculadora\Operaciones\Operacion.class
+TiendaMyM\calculadora\Operaciones\Dividir.class
+TiendaMyM\calculadora\Operaciones\Multiplicar.class
+TiendaMyM\calculadora\Operaciones\Restar.class
+TiendaMyM\calculadora\Operaciones\Sumar.class
