@@ -20,4 +20,11 @@ public class TestMultiplicar {
         multiplicar.setB(2);
         assertEquals(4,multiplicar.operar(),0);
     }
+
+    @Test
+    public void multiplicar_2_negative2_negative4() {
+        multiplicar.setA(2);
+        multiplicar.setB(-2);
+        assertEquals(-4,multiplicar.operar(),0);
+    }
 }
