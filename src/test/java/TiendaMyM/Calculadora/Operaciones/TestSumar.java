@@ -20,4 +20,11 @@ public class TestSumar {
         sumar.setB(2);
         assertEquals(4,sumar.operar(),0);
     }
+
+    @Test
+    public void sumar_2_negative2_0() {
+        sumar.setA(2);
+        sumar.setB(-2);
+        assertEquals(0,sumar.operar(),0);
+    }
 }
