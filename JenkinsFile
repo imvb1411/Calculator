@@ -4,14 +4,16 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                git
-                sh './mvnw clean compile'
+                git https://github.com/imvb1411/Calculator.git
+                // sh './mvnw clean compile'
+                bat '.\mvnw clean compile'
+
             }
         }
         stage('Test') {
             steps {
-                sh './mvnw test'
-                // bat '.\mvnw test'
+                // sh './mvnw test'
+                bat '.\mvnw test'
             }
 
             post {
