@@ -1,23 +1,24 @@
 pipeline {
     agent any
-
+    
     stages {
-        stage('Build') {
+        stage('clone') {          
             steps {
-                git 'https://github.com/imvb1411/Calculator.git'
+                git branch: 'dev', credentialsId: 'imvb14', url: 'https://github.com/imvb1411/Calculator.git'
                 // sh './mvnw clean compile'mvn
-                bat 'mvn clean compile'
-
             }
         }
-        stage('Test') {
+        stage('build'){
             steps {
-                // sh './mvnw test'
+                bat 'mvn clean compile'
+            }
+        }
+        stage('test'){
+            steps{
                 bat 'mvn test'
             }
-
-            post {
-                always {
+            post{
+                always{
                     junit '**/target/surefire-reports/TEST-*.xml'
                 }
             }
